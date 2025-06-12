@@ -9,7 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.9.2",
-    "hotkeypad": "^1.0.2"
+    "hotkeypad": "^1.0.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "astro": "^5.9.2"
   }
 }

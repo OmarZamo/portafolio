@@ -1,5 +1,33 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@cv": [
+        "./cv.json"  // Alias para acceder al archivo cv.json
+      ],
+      "@/*": [
+        "src/*"  // Alias para acceder a cualquier archivo dentro de la carpeta src
+      ]
+    },
+    "moduleResolution": "node16",  // Resolución de módulos al estilo Node.js
+    "module": "Node16",            // Esto debe coincidir con moduleResolution: "node16"
+    "jsx": "react-jsx",           // Habilitar JSX para los archivos Astro
+    "esModuleInterop": true,       // Habilita la interoperabilidad entre módulos
+    "skipLibCheck": true,          // Omite comprobaciones de tipos de dependencias
+    "strict": true,                // Habilita el modo estricto de TypeScript
+    "allowJs": true,               // Permite usar archivos JS
+    "checkJs": false,              // No realiza comprobaciones de tipos en archivos .js
+    "resolveJsonModule": true,     // Permite importar archivos JSON
+    "noEmit": true                 // No emite archivos de salida
+  },
+  "include": [
+    "src/**/*.astro",  // Asegúrate de incluir todos los archivos .astro
+    "src/**/*.ts",     // Archivos .ts
+    "src/**/*.tsx"     // Archivos .tsx
+  ],
+  "exclude": [
+    "node_modules",  // Excluye la carpeta node_modules
+    "dist"           // Excluye la carpeta dist
+  ]
 }
