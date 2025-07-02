@@ -1,24 +1,34 @@
 {
   "basics": {
     "name": "Omar Isaac Zamorano Martínez",
-    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación",
+    "label": "Web Developer Full Stack Developer",
     "image": "/me.webp",
-    "email": "miduga@gmail.com",
-    "phone": "+34 688888888",
+    "email": "omariszamorano@gmail.com",
+    "phone": "+52 7712367714",
     "url": "https://midu.dev",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
+    "summary": "Soy un desarrollador Full Stack con enfoque especializado en el desarrollo Back-End. Me caracterizo por ser una persona responsable, comprometida y con una sólida formación técnica. Actualmente me desempeño en el desarrollo de aplicaciones web, donde combino la lógica, eficiencia y seguridad necesarias para construir sistemas robustos. Disfruto trabajar en equipo y adaptarme a distintos entornos, siempre con la meta de cumplir objetivos y ofrecer soluciones de alta calidad. Busco seguir creciendo profesionalmente y enfrentar nuevos desafíos que me permitan fortalecer tanto mis habilidades técnicas como personales.",
+    "quote": "Me apasiona transformar ideas en sistemas web funcionales y eficientes.",
+    "values": [
+      "Compromiso con la calidad",
+      "Trabajo en equipo",
+      "Comunicación clara",
+      "Adaptabilidad",
+      "Pensamiento crítico",
+      "Responsabilidad profesional",
+      "Actitud de aprendizaje continuo"
+    ],
     "location": {
       "address": "",
-      "postalCode": "08820",
-      "city": "el Prat de Llobregat",
-      "countryCode": "ES",
-      "region": "España"
+      "postalCode": "43806",
+      "city": "Tizayuca, Hidalgo",
+      "countryCode": "MX",
+      "region": "Mexico"
     },
     "profiles": [
       {
         "network": "LinkedIn",
         "username": "midudev",
-        "url": "https://linkedin.com/in/midudev"
+        "url": "https://linkedin.com/in/zamorano-martìnez-omar-isaac-771aba325"
       },
       {
         "network": "X",
@@ -78,13 +88,13 @@
     ]
   }],
   "education": [{
-    "institution": "Universitat Oberta de Catalunya",
-    "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
+    "institution": "Instituto Tecnologico Nacional de Mexico Campus Pachuca",
+    "url": "https://itp.itpachuca.edu.mx/",
+    "area": "Ingeniero en Sistemas Computacionales",
     "studyType": "Bachelor",
-    "startDate": "2003-01-01",
-    "endDate": "2009-01-01",
-    "score": "4.0",
+    "startDate": "2020-07-16",
+    "endDate": "2024-12-16",
+    "score": "94.0",
     "courses": [
       "DB1101 - Basic SQL"
     ]

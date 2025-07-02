@@ -1,19 +1,15 @@
 ---
-// se ejecuta en el servidor o en build time <----
-const { title } = Astro.props
+// Recibe props
+const { title, class: sectionClass = '' } = Astro.props
 ---
 
-<section>
+<section class={sectionClass}>
   {title && <h2>{title}</h2>}
   <slot />
 </section>
 
-<script>
-  // se ejecuta en el cliente <----
-</script>
-
 <style>
-  section {
+  section:not(.hero-section):not(.full) {
     max-width: 700px;
     margin: 0 auto 48px;
   }
@@ -26,8 +22,9 @@ const { title } = Astro.props
   }
 
   @media (width <= 700px) {
-    section {
+    section:not(.hero-section):not(.full) {
       margin-bottom: 38px;
     }
   }
 </style>
+
