@@ -104,7 +104,9 @@ const LEVEL_COLORS = {
       // Usamos los idiomas proporcionados en el JSON
       languages.map(({ language, fluency }) => {
         // Asignamos el color correspondiente al nivel de fluidez
-        const fluides = fluency === "Nativo" ? "Experto" :  fluency;
+        const fluides = fluency === "Nativo" ? "Experto" :  
+                        fluency === "Intermedio-B2" ? "Intermedio" :  
+                        fluency;
         const levelColor = LEVEL_COLORS[fluides as keyof typeof LEVEL_COLORS];
 
         return (

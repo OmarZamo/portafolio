@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Omar Isaac Zamorano Martínez",
-    "label": "Web Developer Full Stack Developer",
+    "label": "Full Stack Developer",
     "image": "/me.webp",
     "email": "omariszamorano@gmail.com",
     "phone": "+52 7712367714",
-    "url": "",
-    "summary": "Soy un desarrollador Full Stack con enfoque especializado en el desarrollo Back-End. Me caracterizo por ser una persona responsable, comprometida y con una sólida formación técnica. Actualmente me desempeño en el desarrollo de aplicaciones web, donde combino la lógica, eficiencia y seguridad necesarias para construir sistemas robustos. Disfruto trabajar en equipo y adaptarme a distintos entornos, siempre con la meta de cumplir objetivos y ofrecer soluciones de alta calidad. Busco seguir creciendo profesionalmente y enfrentar nuevos desafíos que me permitan fortalecer tanto mis habilidades técnicas como personales.",
+    "url": "https://portafolio-self-two-21.vercel.app/",
+    "summary": "Soy un desarrollador Full Stack con enfoque especializado en el desarrollo Back-End. Me caracterizo por ser un profesional orientado a resultados. Actualmente me desempeño en el desarrollo de aplicaciones web, donde combino la lógica, eficiencia y seguridad necesarias para construir sistemas robustos. Disfruto trabajar en equipo y adaptarme a distintos entornos, siempre con la meta de cumplir objetivos y ofrecer soluciones de alta calidad. Busco seguir creciendo profesionalmente y enfrentar nuevos desafíos que me permitan fortalecer tanto mis habilidades técnicas como personales.",
     "quote": "Me apasiona transformar ideas en sistemas web funcionales y eficientes.",
     "values": [
       "Compromiso con la calidad",
@@ -309,7 +309,7 @@
     },
     {
       "language": "Ingles",
-      "fluency": "Intermedio"
+      "fluency": "Intermedio-B2"
     }
   ],
   "interests": [{
