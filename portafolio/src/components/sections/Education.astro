@@ -1,38 +1,195 @@
 ---
+// Importar datos de educación y certificaciones
 import Section from "../Section.astro"
-
-import { education } from "@cv"
+import { education, certificates } from "@cv";
 ---
 
-<Section title="Educación">
-  <ul>
+<Section title="Educación" id="educacion">
+  <!-- Tarjetas de educación escolarizada -->
+  <div class="education-grid">
     {
-      education.map(({ institution, startDate, endDate, area }) => {
-        const startYear = new Date(startDate).getFullYear()
-        const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual"
-        const years = `${startYear} - ${endYear}`
+      education.map(({ institution, startDate, endDate, area, logo }) => {
+        const startYear = new Date(startDate).getFullYear();
+        const endYear = endDate ? new Date(endDate).getFullYear() : "Actual";
+        const years = `${startYear} - ${endYear}`;
 
         return (
-          <li>
-            <article>
-              <header>
-                <div>
-                  <h3>{institution}</h3>
-                </div>
-
-                <time>{years}</time>
-              </header>
-
-              <footer>
-                <p>{area}</p>
-              </footer>
-            </article>
-          </li>
-        )
+          <div class="education-card">
+            <img src={`./${logo}`} alt={institution} class="school-logo" />
+            <div class="education-info">
+              <h3>{institution}</h3>
+              <time>{years}</time>
+              <p>{area}</p>
+            </div>
+          </div>
+        );
       })
     }
-  </ul>
+  </div>
+
+  <!-- Título "Certificaciones" -->
+  <h3 class="certifications-title">Certificaciones</h3>
+  
+  <!-- Tarjetas de certificaciones -->
+  <div class="certifications-grid">
+    {
+      certificates.map(({ name, date, issuer, url }) => {
+        return (
+          <div class="certificate-card">
+            <h4>{name}</h4>
+            <p>{issuer}</p>
+            <time>{date}</time>
+            <a href={url} target="_blank" rel="noopener noreferrer">Ver Certificado</a>
+          </div>
+        );
+      })
+    }
+  </div>
 </Section>
+
+<style>
+  /* Estilo de las tarjetas de educación */
+  .education-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .education-card {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: var(--rounded);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .school-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+  }
+
+  .education-info {
+    margin-top: 1rem;
+  }
+
+  .education-info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .education-info time {
+    font-size: 1rem;
+    color: var(--accent);
+  }
+
+  .education-info p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Estilo de la sección de certificaciones */
+  .certifications-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+
+  .certifications-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
+  }
+
+  .certificate-card {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--rounded);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .certificate-card h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .certificate-card p {
+    font-size: 1rem;
+    color: var(--accent);
+  }
+
+  .certificate-card time {
+    font-size: 0.9rem;
+    color: var(--primary);
+  }
+
+  .certificate-card a {
+    font-size: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .certificate-card a:hover {
+    color: var(--primary);
+  }
+
+  /* Media query para dispositivos móviles */
+  @media (max-width: 600px) {
+    .education-grid {
+      padding: 0.7rem;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    .education-card {
+      padding: 1rem;
+    }
+    .school-logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+    .education-info {
+      margin-top: 0.5rem;
+    }
+    .education-info h3 {
+      font-size: 1.1rem;
+    }
+    .education-info time,
+    .education-info p {
+      font-size: 0.95rem;
+    }
+    .certifications-title {
+      font-size: 1.3rem;
+      margin: 1.2rem 0;
+    }
+    .certifications-grid {
+      padding: 0.7rem;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    .certificate-card {
+      padding: 0.8rem;
+    }
+    .certificate-card h4 {
+      font-size: 1rem;
+    }
+    .certificate-card p,
+    .certificate-card a {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
 
 

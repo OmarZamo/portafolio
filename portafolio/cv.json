@@ -5,7 +5,7 @@
     "image": "/me.webp",
     "email": "omariszamorano@gmail.com",
     "phone": "+52 7712367714",
-    "url": "https://midu.dev",
+    "url": "",
     "summary": "Soy un desarrollador Full Stack con enfoque especializado en el desarrollo Back-End. Me caracterizo por ser una persona responsable, comprometida y con una sólida formación técnica. Actualmente me desempeño en el desarrollo de aplicaciones web, donde combino la lógica, eficiencia y seguridad necesarias para construir sistemas robustos. Disfruto trabajar en equipo y adaptarme a distintos entornos, siempre con la meta de cumplir objetivos y ofrecer soluciones de alta calidad. Busco seguir creciendo profesionalmente y enfrentar nuevos desafíos que me permitan fortalecer tanto mis habilidades técnicas como personales.",
     "quote": "Me apasiona transformar ideas en sistemas web funcionales y eficientes.",
     "values": [
@@ -27,54 +27,63 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "midudev",
+        "username": "Omar Zamorano",
         "url": "https://linkedin.com/in/zamorano-martìnez-omar-isaac-771aba325"
       },
       {
-        "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
-      },
-      {
         "network": "GitHub",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "Omar Zamorano",
+        "url": "https://github.com/OmarZamo"
       }
     ]
   },
   "work": [
     {
-      "name": "midudev",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
+      "name": "Two Rancheros Digital Technologies | Clever  Cloud",
+      "position": " Desarollador de soluciones de software",
+      "url": "https://clevercloud.mx/",
+      "startDate": "2024-12-15",
       "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "summary": "Diseño, desarrollo e implementación de servicios web estandarizados (APIs REST) para las aplicaciones internas de la empresa. Participación activa en el diseño de base de datos, maquetación y desarrollo de interfaces web, así como en la documentación técnica (DoR) y la solución de errores. Trabajo enfocado en arquitectura cliente-servidor con separación clara entre frontend (JavaScript) y backend (PHP + MySQL).",
       "highlights": [
-        "Started the company"
+          "Desarrollo e integración de nuevos módulos para la plataforma de e-learning de la empresa.",
+          "Participación en el rediseño visual y funcional de múltiples vistas del sistema.",
+          "Implementación de APIs RESTful para consumo interno y externo.",
+          "Maquetación de interfaces web ",
+          "Documentación técnica bajo DoR para asegurar seguimiento y trazabilidad.",
+          "Detección y resolución de errores resagados"
+      ]
+    },
+   {
+      "name": "Instituto Tecnológico de Pachuca",
+      "position": "Desarrollador de software",
+      "url": "https://itp.itpachuca.edu.mx/",
+      "startDate": "2023-12-01",
+      "endDate": "2024-06-30",
+      "summary": "Diseño e implementación de soluciones de software para el Departamento de Ingeniería Eléctrica y Electrónica. Participación en el análisis de requerimientos, desarrollo de esquemas de base de datos y construcción de herramientas internas bajo metodologías ágiles.",
+      "highlights": [
+        "Desarrollo de software para gestión administrativa y académica del departamento.",
+        "Diseño conceptual y modelado de bases de datos.",
+        "Participación activa en el análisis de contexto y documentación de requerimientos.",
+        "Implementación de soluciones usando Java.",
+        "Soporte en tareas administrativas y seguimiento de proyectos tecnológicos."
       ]
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "name": "Mundo Futbol Pachuca",
+      "position": "Soporte y mantenimiento",
+      "url": "https://mundo-futbol.fmd.org.mx/",
+      "startDate": "2019-12-01",
+      "endDate": "2020-06-30",
+      "summary": "Mantenimiento preventivo y correctivo de equipos informáticos y redes dentro del museo interactivo. Participación en labores de soporte técnico, instalación de software y seguimiento de incidencias con usuarios internos.",
       "highlights": [
-        "Started the company"
+        "Diagnóstico y solución de fallas en impresoras, cableado estructurado y switches.",
+        "Soporte técnico en sistemas interactivos y zonas de exhibición del museo.",
+        "Documentación de incidencias y generación de reportes técnicos.",
+        "Apoyo en instalación de software y asistencia a usuarios en redes y sistemas operativos."
       ]
-    },
-    {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
-      "highlights": [
-        "Started the company"
-      ]
-    }
+  }
+
   ],
   "volunteer": [{
     "organization": "Organization",
@@ -87,7 +96,8 @@
       "Awarded 'Volunteer of the Month'"
     ]
   }],
-  "education": [{
+  "education": [
+  {
     "institution": "Instituto Tecnologico Nacional de Mexico Campus Pachuca",
     "url": "https://itp.itpachuca.edu.mx/",
     "area": "Ingeniero en Sistemas Computacionales",
@@ -95,10 +105,25 @@
     "startDate": "2020-07-16",
     "endDate": "2024-12-16",
     "score": "94.0",
+    "logo": "/itp.webp",
     "courses": [
       "DB1101 - Basic SQL"
     ]
-  }],
+  },
+   {
+    "institution": "Centro de Bachillerato Tecnológico Industrial y de Servicios No.222",
+    "url": "http://cbtis222.com.mx/",
+    "area": "Tecnico en Mecatronica",
+    "studyType": "Bachelor",
+    "startDate": "2017-07-16",
+    "endDate": "2020-06-16",
+    "score": "92.0",
+    "logo": "/cbt.webp",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }
+  ],
   "awards": [{
     "title": "Award",
     "date": "2014-11-01",
@@ -106,11 +131,36 @@
     "summary": "There is no spoon."
   }],
   "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
+    "name": "AWS Academy Graduate - AWS Academy Cloud Foundations",
+    "date": "2024-9-01",
+    "issuer": "Amazon Web Service (AWS)",
+    "url": "https://www.credly.com/badges/18dd238d-5d6e-468f-aa2e-4c18c5cefdd2/linked_in_profile"
+  },
+  {
+    "name": "PostgreSQL and Oracle for beginners",
+    "date": "2024-10-01",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-7d123d52-3d67-4985-9bbf-7dae5d5de82a/"
+  },
+  {
+    "name": "Introduction to Data Science",
+    "date": "2024-9-01",
+    "issuer": "Cisco",
+    "url": "https://www.credly.com/badges/e0462fdb-3c9d-44d0-96bd-ec64c5f209dc/linked_in_profile"
+  },
+  {
+    "name": "CSS And JavaScript Complete course for beginners",
+    "date": "2024-9-01",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-ceea28c3-2772-483e-b22f-b626dabd154e/"
+  },
+  {
+    "name": "Computer Hardware Basics",
+    "date": "2024-9-01",
+    "issuer": "cisco",
+    "url": "https://www.credly.com/badges/f66e0d1d-1109-440f-978b-52534cb75b64/linked_in_profile"
+  }
+],
   "publications": [{
     "name": "Publication",
     "publisher": "Company",
@@ -118,93 +168,148 @@
     "url": "https://publication.com",
     "summary": "Description…"
   }],
-  "skills": [
+    "skills": [
     {
       "name": "HTML",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend"
-      ]
+      "level": "Intermedio",
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Web", "Frontend"]
     },
     {
       "name": "CSS",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
-      ]
+      "level": "Intermedio",
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
       "name": "JavaScript",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
-      ]
-    },
-    {
-      "name": "Tailwind",
       "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
-      ]
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
     },
     {
       "name": "TypeScript",
       "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
-      ]
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+    },
+    {
+      "name": "Java",
+      "level": "Intermedio",
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Backend", "APIs", "Aplicaciones Empresariales"]
+    },
+    {
+      "name": "PHP",
+      "level": "Avanzado",
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Backend", "APIs", "Web"]
     },
     {
       "name": "Node",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
-      ]
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
     },
     {
-      "name": "MySQL",
+      "name": "Laravel",
       "level": "Avanzado",
-      "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
-      ]
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Web", "PHP", "Backend", "APIs"]
     },
     {
       "name": "React",
       "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
-      ]
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Vue",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Framework", "UI"]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"]
+    },
+    {
+      "name": "MongoDB",
+      "level": "Avanzado",
+      "category": "Bases de Datos",
+      "keywords": ["NoSQL", "Bases de Datos", "Backend"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "category": "Bases de Datos",
+      "keywords": ["Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"]
+    },
+    {
+      "name": "Git",
+      "level": "Intermedio",
+      "category": "Control de Versiones",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Intermedio",
+      "category": "Control de Versiones",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Web", "Frontend", "Static Site Generator"]
+    },
+    {
+      "name": "Amazon Web Services (AWS)",
+      "level": "Intermedio",
+      "category": "Sistemas Operativos / Infraestructura",
+      "keywords": ["Cloud", "Infraestructura", "Servicios Web"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Web", "Frontend", "CSS Framework"]
+    },
+    {
+      "name": "Swift",
+      "level": "Intermedio",
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo iOS", "Mobile", "Aplicaciones"]
+    },
+    {
+      "name": "SwiftUI",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Desarrollo iOS", "Mobile", "UI"]
+    },
+    {
+      "name": "Kotlin",
+      "level": "Intermedio",
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Android", "Mobile", "Backend"]
+    },
+    {
+      "name": "Flutter",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Desarrollo Mobile", "Cross-Platform", "Aplicaciones"]
     }
   ],
   "languages": [
     {
-      "language": "Spanish",
-      "fluency": "Native speaker"
+      "language": "Español",
+      "fluency": "Nativo"
     },
     {
-      "language": "English",
-      "fluency": "Advanced"
+      "language": "Ingles",
+      "fluency": "Intermedio"
     }
   ],
   "interests": [{
@@ -218,68 +323,68 @@
     "name": "Jane Doe",
     "reference": "Reference…"
   }],
+  
   "projects": [
-    {
-      "name": "mars.codes",
-      "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": [
-        "Elige tu propia aventura",
-        "En desarrollo"
-      ],
-      "url": "https://mars.codes"
-    },
-    {
-      "name": "AdventJS",
-      "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://adventjs.dev"
-    },
-    {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": [
-        "+2000 usuarios activos",
-        "Retos para cualquier lenguaje"
-      ],
-      "url": "https://codember.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": [
-        "100k visitas al mes",
-        "Desarrollado por la comunidad"
-      ],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": [
-        "100% gratuito",
-        "+500 soluciones de la comunidad"
-      ],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": [
-        "+15k tickets repartidos",
-        "+50k espectadores en directo"
-      ],
-      "url": "https://miduconf.com"
-    }
-  ]
+  {
+    "name": "Implementación de dispositivos IoT",
+    "isActive": true,
+    "description": "Aplicacion web para control y administracion de un dispositivo IoT",
+    "highlights": [
+      "Base de funcionalidad para implemtaciones IoT",
+      "PHP + JS",
+      "Completado"
+    ],
+    "github": "https://github.com/OmarZamo/Administracion-y-control-IoT",
+    "image": "/p1.webp"
+  },
+  {
+    "name": "Implementación de dispositivos IoT",
+    "isActive": true,
+    "description": "Codigo del controlador requerido para el proyecto IoT",
+    "highlights": [
+     "Base de funcionalidad para implemtaciones IoT",
+      "Completado"
+      
+    ],
+    "github": "https://github.com/OmarZamo/Dispositivo-IoT",
+    "image": "/p2.webp"
+  },
+  {
+    "name": "Aplicación de Asesorías académicas",
+    "isActive": true,
+    "description": "Aplicación web que ofrece un servicio de comunicación y gestión de asesorías académicas",
+    "highlights": [
+      "Completado"
+    ],
+    "github": "https://github.com/OmarZamo/Aplicacion-Asesrorias",
+    "image": "/p3.webp"
+  },
+  {
+    "name": "Administración de Archivos",
+    "isActive": true,
+    "description": "Aplicación de escritorio para administrar currículums o documentos en un ambiente administrativo",
+    "highlights": [
+    ],
+    "github": "https://github.com/OmarZamo/Administracion-de-archivos",
+    "image": "/p4.webp"
+  },
+  {
+    "name": "Portafolio personal",
+    "isActive": true,
+    "description": "Código del presente portafolio",
+    "highlights": [
+    ],
+    "github": "https://github.com/OmarZamo/portafolio",
+    "image": "/p5.webp"
+  },
+  {
+    "name": "Desarrollo Privado para Clever Cloud",
+    "description": "Desarrollo de soluciones web para Clever Cloud de Carácter Confidencial",
+    "highlights": [
+    ],
+    "url": "https://clevercloud.mx/",
+    "image": "/p6.webp"
+  }
+]
+
 }

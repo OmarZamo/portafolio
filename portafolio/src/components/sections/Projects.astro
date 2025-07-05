@@ -5,45 +5,110 @@ import Section from "../Section.astro"
 import { projects } from "@cv"
 ---
 
-<Section title="Proyectos">
-  <ul>
+<Section title="Proyectos" id="proyectos">
+  <div class="projects-grid">
     {
-      projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
-          return (
-            <li>
-              <article>
-                <header>
-                  <h3>
-                    <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>
-                      {name}
+      projects.map(({ url, description, highlights, name, isActive, github, image }) => {
+        return (
+          <div class="project-card">
+            <img src={`./${image}`} alt={`Imagen de ${name}`} class="project-image" />
+            <article>
+              <header>
+                <h3>
+                  <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>
+                    {name}
+                  </a>
+                  {isActive && <span>•</span>}
+                  {github && (
+                    <a
+                      class="github-code-link"
+                      href={github}
+                      target="_blank"
+                      title={`Ver código fuente del proyecto ${name}`}
+                    >
+                      <GitHub />
                     </a>
-                    {isActive && <span>•</span>}
-                    {github && (
-                      <a
-                        class="github-code-link"
-                        href={github}
-                        target="_blank"
-                        title={`Ver código fuente del proyecto ${name}`}
-                      >
-                        <GitHub />
-                      </a>
-                    )}
-                  </h3>
-                  <p>{description}</p>
-                </header>
-                <footer>
-                  {highlights.map((highlight) => {
-                    return <span>{highlight}</span>
-                  })}
-                </footer>
-              </article>
-            </li>
-          )
-        }
-      )
+                  )}
+                </h3>
+                <p>{description}</p>
+              </header>
+            </article>
+          </div>
+        );
+      })
     }
-  </ul>
+  </div>
 </Section>
+
+<style>
+  .projects-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .project-card {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--rounded);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: var(--rounded);
+    margin-bottom: 1rem;
+  }
+
+  .project-card article {
+    text-align: center;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    color: var(--text);
+    margin-top: 0.5rem;
+  }
+
+  .github-code-link {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+
+  .github-code-link:hover {
+    color: var(--primary);
+  }
+
+  .project-card footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .project-card footer span {
+    display: block;
+    color: var(--primary);
+    margin-top: 0.25rem;
+  }
+</style>
+
 
 

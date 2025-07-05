@@ -3,54 +3,153 @@ import Section from "../Section.astro"
 
 import { work } from "@cv"
 ---
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<style>
+ .experience-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem 2rem;
+  width: 100%;
+  min-height: 100%; /* Asegura que las tarjetas no dejen mucho espacio vacío */
+  box-sizing: border-box;
+}
 
-<Section title="Experiencia laboral">
-  <ul>
+
+@media (max-width: 600px) {
+  .experience-grid {
+    padding: 0.5rem 0.2rem;
+    gap: 1rem;
+    grid-template-columns: 1fr; /* Pasa a una columna */
+  }
+  .experience-card {
+    padding: 1rem;
+    min-height: 120px;
+  }
+  .experience-card h3 {
+    font-size: 1.1rem;
+  }
+  .experience-card h4 {
+    font-size: 0.98rem;
+  }
+  .date-range {
+    font-size: 0.85rem;
+    margin-top: 0.1rem;
+  }
+  .toggle-btn {
+    font-size: 0.98rem;
+    margin-top: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .content ul {
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+  }
+  .highlights li {
+    font-size: 0.95rem;
+  }
+}
+
+
+.experience-card {
+  background-color: var(--light);
+  padding: 2rem;
+  border-radius: var(--rounded);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 200px; /* Ajustamos la altura mínima de las tarjetas */
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2); /* Mejorar el efecto hover */
+}
+
+.date-range {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-top: 0.25rem;
+}
+
+.content ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  margin-top: 1rem;
+  background: transparent;
+  color: var(--accent);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.toggle-btn:hover {
+  color: var(--primary);
+}
+
+
+</style>
+
+<Section title="Experiencia laboral" id="experiencia">
+  <ul class="experience-grid">
     {
-      work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+      work.map(({ name, startDate, endDate, position, summary, highlights, url }, index) => {
+        const startYear = new Date(startDate).getFullYear()
+        const endYear = endDate ? new Date(endDate).getFullYear() : "Actual"
 
-          return (
-            <li>
-              <article>
-                <header>
-                  <div>
-                    <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
-                        {name}
-                      </a>
-                    </h3>
-                    <h4>{position}</h4>
-                  </div>
+        return (
+          <li class="experience-card">
+            <article x-data="{ showHighlights: false }">
+              <header>
+                <div>
+                  <h3>
+                    <a href={url} title={`Ver ${name}`} target="_blank" rel="noopener noreferrer">
+                      {name}
+                    </a>
+                  </h3>
+                  <h4>{position}</h4>
+                </div>
+                <div class="date-range">
+                  <time datetime={startDate}>{startYear}</time> - <time datetime={endDate}>{endYear}</time>
+                </div>
+              </header>
 
-                  <div>
-                    <time 
-                      datetime={startDate}
-                      data-title={startDate}>
-                        {startYear}
-                    </time>
-                    {" - "}
-                    <time 
-                      datetime={endDate}
-                      data-title={endDate}>
-                        {endYear}
-                    </time>
-                  </div>
-                </header>
+              <div class="content">
+              <!-- Resumen: visible cuando no se muestran los highlights -->
+              <p x-show="!showHighlights" x-transition:enter="transition-opacity ease-out duration-500" x-transition:leave="transition-opacity ease-in duration-300">{summary}</p>
+              
+              <!-- Highlights: visibles cuando se muestran los logros -->
+              <ul x-show="showHighlights" x-transition:enter="transition-opacity ease-out duration-500" x-transition:leave="transition-opacity ease-in duration-300" class="highlights">
+                {highlights.map(item => <li>{item}</li>)}
+              </ul>
+            </div>
 
-                <footer>
-                  <p>{summary}</p>
-                </footer>
-              </article>
-            </li>
-          )
-        }
-      )
+              <button 
+                type="button" 
+                class="toggle-btn" 
+                x-on:click="showHighlights = !showHighlights"
+                x-text="showHighlights ? 'Ver info' : 'Ver logros'">
+              </button>
+            </article>
+          </li>
+        )
+      })
     }
   </ul>
 </Section>
+
 
 

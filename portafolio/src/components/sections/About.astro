@@ -6,14 +6,14 @@ import { Lightbulb } from "lucide-astro";
 const { summary, quote, values, name, image } = basics
 ---
 
-<Section class="about-section full">
+<Section class="about-section full" id="personal">
   <div class="about-wrapper">
     <div class="about-card">
       <h3>¿Quién soy?</h3>
       <p>{summary}</p>
     </div>
     <!-- 💬 Cita personal -->
-    <div class="about-block">
+    <div class="about-block" style="text-align: center;">
       <Lightbulb class="about-icon" />
       <blockquote class="about-quote">“{quote}”</blockquote>
 
@@ -51,6 +51,16 @@ const { summary, quote, values, name, image } = basics
   justify-content: center;
 }
 
+.about-card p {
+  text-align: justify;
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
 .about-quote {
   font-style: italic;
@@ -71,6 +81,9 @@ const { summary, quote, values, name, image } = basics
   color: var(--accent);
   margin-bottom: 1rem;
   opacity: 0.85;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .value-list li {

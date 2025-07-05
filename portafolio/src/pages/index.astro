@@ -1,4 +1,6 @@
 ---
+// Importar el componente Sidebar
+import Sidebar from "@/components/Sidebar.astro"
 import Layout from "@/layouts/Layout.astro"
 
 import About from "@/components/sections/About.astro"
@@ -14,13 +16,14 @@ const { name, label } = basics
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`}>
+  <Sidebar />
   <main>
     <Hero />
     <About />
     <Experience />
+    <Skills />
     <Education />
     <Projects />
-    <Skills />
   </main>
 
   <KeyboardManager />

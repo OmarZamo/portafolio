@@ -1,0 +1,154 @@
+---
+---
+
+<aside id="sidebar" class="sidebar">
+  <button class="menu-btn" id="menu-btn" type="button">
+    ☰
+  </button>
+
+  <ul class="sidebar-links">
+    <li><a href="#personal" class="sidebar-link">Sobre mi</a></li>
+    <li><a href="#experiencia" class="sidebar-link">Experiencia</a></li>
+    <li><a href="#habilidades" class="sidebar-link">Habilidades</a></li>
+    <li><a href="#educacion" class="sidebar-link">Educación</a></li>
+    <li><a href="#proyectos" class="sidebar-link">Proyectos</a></li>
+    <li><a href="/path-to-your-cv.pdf" download>Descargar CV</a></li>
+  </ul>
+</aside>
+<!-- Botón flotante para mostrar la barra lateral -->
+<button id="sidebar-fab" class="sidebar-fab" type="button" aria-label="Abrir menú" style="display:none;">☰</button>
+
+<style>
+  /* Estilos para la barra lateral (sidebar) */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculta fuera de la pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: var(--primary);
+    color: var(--light);
+    transition: left 0.3s ease; /* Transición suave al cambiar el 'left' */
+    padding: 2rem;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0; /* Cuando está activa, se coloca a la izquierda de la pantalla */
+  }
+
+  .sidebar-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar-links li {
+    margin: 1rem 0;
+  }
+
+  .sidebar-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .sidebar-links a:hover {
+    color: var(--accent);
+  }
+
+  .menu-btn {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: var(--light);
+    cursor: pointer;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-fab {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 1.5rem;
+    z-index: 1100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Oculta el botón cuando la barra lateral está visible */
+  .sidebar.active ~ #sidebar-fab {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    .menu-btn {
+      display: block;
+    }
+
+    .sidebar {
+      left: -250px; /* Oculta la barra lateral por defecto en móviles */
+    }
+    .sidebar.active {
+      left: 0; /* Muestra la barra lateral cuando está activa */
+    }
+    main {
+      margin-left: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    main {
+      margin-left: 250px; /* Ajuste cuando la barra lateral está visible */
+    }
+  }
+</style>
+
+<script is:inline>
+  // Alternar la visibilidad de la barra lateral
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const links = document.querySelectorAll('.sidebar-link');
+    const fab = document.getElementById('sidebar-fab');
+
+    function showSidebar() {
+      sidebar.classList.add('active');
+      fab.style.display = 'none';
+    }
+    function hideSidebar() {
+      sidebar.classList.remove('active');
+      fab.style.display = 'flex';
+    }
+    function toggleSidebar() {
+      if (sidebar.classList.contains('active')) {
+        hideSidebar();
+      } else {
+        showSidebar();
+      }
+    }
+    // Mostrar el botón flotante solo si la barra lateral está oculta al cargar
+    if (!sidebar.classList.contains('active')) {
+      fab.style.display = 'flex';
+    }
+    if (menuBtn && sidebar) {
+      menuBtn.addEventListener('click', hideSidebar);
+    }
+    if (fab) {
+      fab.addEventListener('click', showSidebar);
+    }
+    links.forEach(link => {
+      link.addEventListener('click', hideSidebar);
+    });
+  });
+</script>
+

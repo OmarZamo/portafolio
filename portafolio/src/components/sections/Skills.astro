@@ -12,43 +12,271 @@ import GitHub from "@/icons/GitHub.astro"
 import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
 import { skills } from "@cv"
+import { languages } from "@cv"
 import Swift from "@/icons/swift.astro"
 import SwiftUI from "@/icons/swiftui.astro"
 import Kotlin from "@/icons/kotlin.astro"
 import Flutter from "@/icons/flutter.astro"
+import Laravel from "@/icons/laravel.astro"
+import Vue from "@/icons/vue.astro"
+import ast from "@/icons/ast.astro"
+import AWS from "@/icons/aws.astro"
+import Java from "@/icons/java.astro"
+import MongoDB from "@/icons/mongodb.astro"
+import PHP from "@/icons/php.astro"
 
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
+const SKILLS_ICONS = {
+  HTML, CSS, JavaScript, TypeScript, React, Node, MySQL, Git, GitHub, Next, Tailwind, Swift, SwiftUI, Kotlin, Flutter,
+  Laravel,Vue,ast,AWS,Java, MongoDB, PHP
+}
+
+
+
+// Nivel de habilidad -> colores
+const LEVEL_COLORS = {
+  "Fundamentos": "#d3d3d3",  // Gris claro
+  "Intermedio": "#f1c40f",  // Amarillo
+  "Avanzado": "#3498db",    // Azul
+  "Experto": "#2ecc71"      // Verde
 }
 ---
+<Section title="Habilidades" id="habilidades">
+  <!-- Guía de colores de los niveles -->
+  <div class="level-guide">
+    <div class="level-item">
+      <span class="level-circle" style="background-color: #d3d3d3;"></span>
+      <span>Fundamentos</span>
+    </div>
+    <div class="level-item">
+      <span class="level-circle" style="background-color: #f1c40f;"></span>
+      <span>Intermedio</span>
+    </div>
+    <div class="level-item">
+      <span class="level-circle" style="background-color: #3498db;"></span>
+      <span>Avanzado</span>
+    </div>
+    <div class="level-item">
+      <span class="level-circle" style="background-color: #2ecc71;"></span>
+      <span>Experto</span>
+    </div>
+  </div>
 
-<Section title="Habilidades">
-  <ul>
+ <div class="skills-grid" style="text-align: center;">
     {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
-        const Icon = SKILLS_ICONS[iconName]
-
+      ['Lenguajes de Programación', 'Frameworks', 'Bases de Datos', 'Control de Versiones', 'Sistemas Operativos / Infraestructura'].map(category => {
         return (
-          <li>
-            {Icon && <Icon />} <span>{name}</span>
-          </li>
+          <div class="skills-category">
+            <h3>{category}</h3>
+            <ul>
+              {
+                skills.filter(skill => skill.category === category).map(({ name, level, keywords }) => {
+                  const iconName = 
+                  name === "Astro" ? "ast" : 
+                  name === "Next.js" ? "Next" : 
+                  name === "Amazon Web Services (AWS)" ? "AWS" : 
+                  name; // Condición para "Astro" y "Next.js"
+                  const Icon = SKILLS_ICONS[iconName as keyof typeof SKILLS_ICONS]
+                  const levelColor = LEVEL_COLORS[level as keyof typeof LEVEL_COLORS]
+
+                  return (
+                    <li class="skill-card">
+                      <div class="skill-header">
+                        {Icon && <Icon />}
+                        <span>{name}</span>
+                        <span class="level-indicator" style={{ backgroundColor: levelColor }}></span>
+                      </div>
+                      <div class="skill-details">
+                        <p>{keywords.join(', ')}</p>
+                      </div>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+          </div>
         )
       })
     }
-  </ul>
+  </div>
+   <h3 style="text-align: left; font-size: 1.8rem; font-weight: bold; margin-bottom: 2rem;">Idiomas</h3>
+   <div class="languages-grid">
+    {
+      // Usamos los idiomas proporcionados en el JSON
+      languages.map(({ language, fluency }) => {
+        // Asignamos el color correspondiente al nivel de fluidez
+        const fluides = fluency === "Nativo" ? "Experto" :  fluency;
+        const levelColor = LEVEL_COLORS[fluides as keyof typeof LEVEL_COLORS];
+
+        return (
+          <div class="language-card">
+            <div class="language-header">
+              <span>{language}</span>
+            </div>
+            <div class="language-level">
+              <span class="level-indicator" style={{ backgroundColor: levelColor }}></span>
+              <span>{fluency}</span>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
 </Section>
+
+<style>
+  .level-guide {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.level-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.level-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.skills-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+}
+
+.skills-category h3 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.skill-card {
+  background-color: var(--light);
+  padding: 1.5rem;
+  border-radius: var(--rounded);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-header span {
+  font-weight: bold;
+}
+
+.level-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.skill-details p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.languages-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center; /* Centrado horizontal */
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .language-card {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--rounded);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+
+  .language-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .language-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .language-level {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+  .level-guide {
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+  }
+  .level-item {
+    font-size: 0.95rem;
+  }
+  .level-circle {
+    width: 15px;
+    height: 15px;
+  }
+  .skills-grid {
+    padding: 0.7rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .skills-category h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+  .skill-card {
+    padding: 0.8rem;
+  }
+  .skill-header {
+    gap: 0.5rem;
+  }
+  .skill-details p {
+    font-size: 0.85rem;
+  }
+  .languages-grid {
+    padding: 0.7rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .language-card {
+    padding: 0.8rem;
+  }
+  .language-header {
+    font-size: 1rem;
+  }
+  .language-level {
+    font-size: 0.95rem;
+    gap: 0.5rem;
+  }
+}
+</style>
