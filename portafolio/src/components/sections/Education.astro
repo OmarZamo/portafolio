@@ -1,7 +1,7 @@
 ---
 // Importar datos de educación y certificaciones
 import Section from "../Section.astro"
-import { education, certificates } from "@cv";
+import { education, certificates, awards} from "@cv";
 ---
 
 <Section title="Educación" id="educacion">
@@ -44,6 +44,23 @@ import { education, certificates } from "@cv";
         );
       })
     }
+  </div>
+
+  <!-- Título "Certificaciones" -->
+  <h3 class="certifications-title">Premios</h3>
+  <div class="certifications-grid">
+  {
+    awards.map(({ title, date, awarder, url }) => {
+      return (
+        <div class="certificate-card">
+          <h4>{title}</h4>
+          <p>{awarder}</p>
+          <time>{date}</time>
+          <a href={url} target="_blank" rel="noopener noreferrer">Ver Reconocimiento</a>
+        </div>
+      );
+    })
+  }
   </div>
 </Section>
 

@@ -125,10 +125,24 @@
   }
   ],
   "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
+    "title": "1er lugar en Concurso de Prototipos de DGETI 2019 en su categoría local.",
+    "date": "2019-06-15",
+    "awarder": "DGETI",
+    "summary": "Concurso de prootipos entre las instituciones de DGTI",
+    "url": "https://drive.google.com/drive/folders/1TH-rIRFz1PyCoJ6aW2yTFwfjeMqgTs1r?usp=drive_link"
+  },
+  {
+    "title": "6to lugar en Concurso de Prototipos de DGETI 2020 en su categoría estatal.",
+    "date": "2020-06-15",
+    "awarder": "DGETI",
+    "summary": "Concurso de prootipos entre las instituciones de DGTI",
+    "url": "https://drive.google.com/drive/folders/1TH-rIRFz1PyCoJ6aW2yTFwfjeMqgTs1r?usp=drive_link"
+  },{
+    "title": "Segundo lugar en Expo computación Electrónica y telecomunicaciones (EXPOCET).",
+    "date": "2020-03-15",
+    "awarder": "UAEH",
+    "summary": "Concurso de prootipos entre las instituciones de DGTI",
+    "url": "https://drive.google.com/drive/folders/1TH-rIRFz1PyCoJ6aW2yTFwfjeMqgTs1r?usp=drive_link"
   }],
   "certificates": [{
     "name": "AWS Academy Graduate - AWS Academy Cloud Foundations",
