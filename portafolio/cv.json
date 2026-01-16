@@ -38,12 +38,30 @@
     ]
   },
   "work": [
+      {
+      "name": "R.B. Tec México",
+      "position": "Desarrollador de software",
+      "url": "",
+      "startDate": "2025-08-01",
+      "endDate": "2026-01-16",
+      "summary": "Desarrollo de un sistema institucional para cliente gubernamental (Senado de la República), participando en la construcción de servicios backend, lógica de negocio y vistas web. Trabajo enfocado en arquitectura por capas, APIs REST, bases de datos relacionales y colaboración bajo metodología Scrum.",
+      "highlights": [
+        "Desarrollo de servicios backend con Java y Spring Boot para una aplicación institucional.",
+        "Implementación de APIs REST utilizando Spring Data JPA, Hibernate, Jakarta y Lombok.",
+        "Construcción de lógica de negocio siguiendo arquitectura por capas (Controller, Service, Repository).",
+        "Desarrollo de vistas dinámicas en JavaScript utilizando Kendo UI.",
+        "Integración de fragmentos Thymeleaf para la construcción de interfaces web funcionales.",
+        "Desarrollo de vistas, funciones y triggers en base de datos PostgreSQL.",
+        "Elaboración inicial de plantillas de reportes con JasperReports.",
+        "Trabajo colaborativo bajo metodología Scrum y control de versiones con Git."
+      ]
+    },
     {
       "name": "Two Rancheros Digital Technologies | Clever  Cloud",
       "position": " Desarollador de soluciones de software",
       "url": "https://clevercloud.mx/",
       "startDate": "2024-12-15",
-      "endDate": null,
+      "endDate": "2025-08-11",
       "summary": "Diseño, desarrollo e implementación de servicios web estandarizados (APIs REST) para las aplicaciones internas de la empresa. Participación activa en el diseño de base de datos, maquetación y desarrollo de interfaces web, así como en la documentación técnica (DoR) y la solución de errores. Trabajo enfocado en arquitectura cliente-servidor con separación clara entre frontend (JavaScript) y backend (PHP + MySQL).",
       "highlights": [
           "Desarrollo e integración de nuevos módulos para la plataforma de e-learning de la empresa.",
@@ -209,7 +227,7 @@
     },
     {
       "name": "Java",
-      "level": "Intermedio",
+      "level": "Avanzado",
       "category": "Lenguajes de Programación",
       "keywords": ["Desarrollo Backend", "APIs", "Aplicaciones Empresariales"]
     },
@@ -398,7 +416,23 @@
     ],
     "url": "https://clevercloud.mx/",
     "image": "/p6.webp"
+  },
+  {
+    "name": "Sistema Institucional SIGM (Proyecto Gubernamental)",
+    "isActive": true,
+    "description": "Desarrollo de un sistema institucional para cliente gubernamental, enfocado en la gestión interna de procesos administrativos y operativos. Proyecto de carácter confidencial.",
+    "highlights": [
+      "APIs REST con Java y Spring Boot",
+      "Arquitectura por capas (Controller, Service, Repository)",
+      "Base de datos PostgreSQL (vistas, funciones y triggers)",
+      "Frontend con JavaScript y Kendo UI",
+      "Vistas dinámicas con Thymeleaf",
+      "Trabajo bajo metodología Scrum",
+      "Proyecto confidencial"
+    ],
+    "image": "/p7.webp"
   }
+
 ]
 
 }
