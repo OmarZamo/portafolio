@@ -24,10 +24,12 @@ import AWS from "@/icons/aws.astro"
 import Java from "@/icons/java.astro"
 import MongoDB from "@/icons/mongodb.astro"
 import PHP from "@/icons/php.astro"
+import SpringBoot from "@/icons/springboot.astro"
+import PostgreSQL from "@/icons/postgresql.astro"
 
 const SKILLS_ICONS = {
   HTML, CSS, JavaScript, TypeScript, React, Node, MySQL, Git, GitHub, Next, Tailwind, Swift, SwiftUI, Kotlin, Flutter,
-  Laravel,Vue,ast,AWS,Java, MongoDB, PHP
+  Laravel,Vue,ast,AWS,Java, MongoDB, PHP, SpringBoot, PostgreSQL
 }
 
 
@@ -74,6 +76,7 @@ const LEVEL_COLORS = {
                   name === "Astro" ? "ast" : 
                   name === "Next.js" ? "Next" : 
                   name === "Amazon Web Services (AWS)" ? "AWS" : 
+                  name === "Spring Boot" ? "SpringBoot" :
                   name; // Condición para "Astro" y "Next.js"
                   const Icon = SKILLS_ICONS[iconName as keyof typeof SKILLS_ICONS]
                   const levelColor = LEVEL_COLORS[level as keyof typeof LEVEL_COLORS]

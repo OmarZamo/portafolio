@@ -202,136 +202,148 @@
   }],
     "skills": [
     {
-      "name": "HTML",
-      "level": "Intermedio",
+      "name": "Java",
+      "level": "Avanzado",
       "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo Web", "Frontend"]
-    },
-    {
-      "name": "CSS",
-      "level": "Intermedio",
-      "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+      "keywords": ["Spring Boot", "APIs REST", "Backend", "Microservicios"]
     },
     {
       "name": "JavaScript",
       "level": "Avanzado",
       "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+      "keywords": ["Fullstack", "Frontend", "Backend", "Kendo UI"]
     },
     {
       "name": "TypeScript",
       "level": "Avanzado",
       "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
-    },
-    {
-      "name": "Java",
-      "level": "Avanzado",
-      "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo Backend", "APIs", "Aplicaciones Empresariales"]
+      "keywords": ["Desarrollo Web", "Frontend", "Type Safety"]
     },
     {
       "name": "PHP",
       "level": "Avanzado",
       "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo Backend", "APIs", "Web"]
+      "keywords": ["Laravel", "APIs REST", "Backend"]
     },
     {
-      "name": "Node",
-      "level": "Intermedio",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
-    },
-    {
-      "name": "Laravel",
+      "name": "HTML",
       "level": "Avanzado",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo Web", "PHP", "Backend", "APIs"]
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Web", "Frontend", "Thymeleaf"]
     },
     {
-      "name": "React",
+      "name": "CSS",
       "level": "Avanzado",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
-    },
-    {
-      "name": "Vue",
-      "level": "Intermedio",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Framework", "UI"]
-    },
-    {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"]
-    },
-    {
-      "name": "MongoDB",
-      "level": "Avanzado",
-      "category": "Bases de Datos",
-      "keywords": ["NoSQL", "Bases de Datos", "Backend"]
-    },
-    {
-      "name": "MySQL",
-      "level": "Avanzado",
-      "category": "Bases de Datos",
-      "keywords": ["Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"]
-    },
-    {
-      "name": "Git",
-      "level": "Intermedio",
-      "category": "Control de Versiones",
-      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
-    },
-    {
-      "name": "GitHub",
-      "level": "Intermedio",
-      "category": "Control de Versiones",
-      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"]
-    },
-    {
-      "name": "Astro",
-      "level": "Intermedio",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo Web", "Frontend", "Static Site Generator"]
-    },
-    {
-      "name": "Amazon Web Services (AWS)",
-      "level": "Intermedio",
-      "category": "Sistemas Operativos / Infraestructura",
-      "keywords": ["Cloud", "Infraestructura", "Servicios Web"]
-    },
-    {
-      "name": "Tailwind",
-      "level": "Avanzado",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo Web", "Frontend", "CSS Framework"]
+      "category": "Lenguajes de Programación",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
       "name": "Swift",
       "level": "Intermedio",
       "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo iOS", "Mobile", "Aplicaciones"]
-    },
-    {
-      "name": "SwiftUI",
-      "level": "Intermedio",
-      "category": "Frameworks",
-      "keywords": ["Desarrollo iOS", "Mobile", "UI"]
+      "keywords": ["Desarrollo iOS", "Mobile", "SwiftUI"]
     },
     {
       "name": "Kotlin",
       "level": "Intermedio",
       "category": "Lenguajes de Programación",
-      "keywords": ["Desarrollo Android", "Mobile", "Backend"]
+      "keywords": ["Desarrollo Android", "Mobile", "Multiplatform"]
+    },
+    {
+      "name": "Spring Boot",
+      "level": "Avanzado",
+      "category": "Frameworks",
+      "keywords": ["Java", "APIs REST", "JPA/Hibernate", "Backend"]
+    },
+    {
+      "name": "Laravel",
+      "level": "Avanzado",
+      "category": "Frameworks",
+      "keywords": ["PHP", "APIs REST", "Backend", "MVC"]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "category": "Frameworks",
+      "keywords": ["Frontend", "SPA", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "category": "Frameworks",
+      "keywords": ["React", "SSR", "Frontend", "Fullstack"]
+    },
+    {
+      "name": "Vue",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Frontend", "JavaScript Framework", "SPA"]
+    },
+    {
+      "name": "Node",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Backend", "JavaScript", "APIs", "Express"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "category": "Frameworks",
+      "keywords": ["CSS Framework", "Utility-First", "Diseño Responsive"]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["Static Site Generator", "Frontend", "Performance"]
+    },
+    {
+      "name": "SwiftUI",
+      "level": "Intermedio",
+      "category": "Frameworks",
+      "keywords": ["iOS", "UI Declarativa", "Mobile"]
     },
     {
       "name": "Flutter",
       "level": "Intermedio",
       "category": "Frameworks",
-      "keywords": ["Desarrollo Mobile", "Cross-Platform", "Aplicaciones"]
+      "keywords": ["Cross-Platform", "Mobile", "Dart"]
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "Avanzado",
+      "category": "Bases de Datos",
+      "keywords": ["SQL", "Relacional", "Triggers", "Views"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "category": "Bases de Datos",
+      "keywords": ["SQL", "Relacional", "Backend"]
+    },
+    {
+      "name": "MongoDB",
+      "level": "Avanzado",
+      "category": "Bases de Datos",
+      "keywords": ["NoSQL", "Documentos", "Backend"]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "category": "Control de Versiones",
+      "keywords": ["Control de Versiones", "Branching", "Colaboración"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "category": "Control de Versiones",
+      "keywords": ["Repositorios", "Colaboración", "CI/CD"]
+    },
+    {
+      "name": "Amazon Web Services (AWS)",
+      "level": "Intermedio",
+      "category": "Sistemas Operativos / Infraestructura",
+      "keywords": ["Cloud", "Infraestructura", "Certificado"]
     }
   ],
   "languages": [
